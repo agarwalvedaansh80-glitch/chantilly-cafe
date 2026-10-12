@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chantilly — The Café, Bandra</title>
+  <meta name="description" content="Delight in Bandra’s neighbourhood pâtisserie & coffee bar. Tres leches, cheesecakes, cozy hot chocolates, careful coffee. Daily 2 PM – 12 AM." />
+  <!-- Fonts: Playfair for hero title only; Fraunces for headings; Inter for UI -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Fraunces:wght@600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="scripts.js"></script>
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="concept-bar" role="note">Concept website by Vedaansh Agarwal · not the official Chantilly website</div>
+
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container d-flex align-center justify-between">
+      <a class="navbar-brand logo" href="index.html" aria-label="Chantilly — The Café home">
+        <span class="logo-word">Chantilly</span><span class="logo-sub">— The Café</span>
+      </a>
+      <nav aria-label="Primary" class="navbar-nav">
+        <a class="nav-link" href="index.html" aria-current="page">Home</a>
+        <a class="nav-link" href="menu.html">Menu</a>
+        <a class="nav-link" href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Photo-first hero (strong overlay for readability) -->
+    <section class="hero hero-photo">
+      <div class="container hero-inner">
+        <h1 class="hero-title playfair">Delight, by the slice &amp; by the sip.</h1>
+        <p class="hero-subtitle">
+          Small-batch cakes and tarts, cozy hot chocolates, and coffee made with care — a warm little pause in the middle of Bandra.
+        </p>
+        <div class="d-flex gap-2 wrap">
+          <a class="btn btn-dark" href="menu.html">Browse today’s menu</a>
+          <a class="btn" target="_blank" rel="noopener"
+             href="https://www.google.com/maps/search/?api=1&query=Chantilly%2C%20Shop%20no.%202%2C%20Darvesh%20Royale%20Building%2C%20Perry%20Road%2C%20Turner%20Rd%2C%20opposite%20Kotak%20Mahindra%20Bank%2C%20Junction%2C%20Bandra%20West%2C%20Mumbai%2C%20Maharashtra%20400050">
+             Open in Maps
+          </a>
+        </div>
+        <p class="small hero-hours">Daily · 2:00 PM – 12:00 AM</p>
+      </div>
+    </section>
+
+    <!-- Value blocks -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="row">
+          <article class="card col-12 col-md-6">
+            <div class="card-body">
+              <h2 class="h4">Signature sips</h2>
+              <p class="mb-0">Classic & dark hot chocolate, butterbeer, and comforting coffee from cappuccino to latte.</p>
+            </div>
+          </article>
+          <article class="card col-12 col-md-6">
+            <div class="card-body">
+              <h2 class="h4">Sweet little celebrations</h2>
+              <p class="mb-0">Classic & Lotus tres leches, cheesecakes, brioche french toast — all clearly labelled.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- External links (Instagram only here; removed from hero) -->
+    <section class="section">
+      <div class="container d-flex wrap gap-2 align-center">
+        <a class="btn btn-dark" target="_blank" rel="noopener"
+           href="https://www.zomato.com/mumbai/chantilly-pali-hill-bandra-west/order">Order on Zomato</a>
+        <a class="btn btn-dark" target="_blank" rel="noopener"
+           href="https://www.swiggy.com/city/mumbai/chantilly-bandra-west-rest49041">Order on Swiggy</a>
+        <a class="btn btn-dark" target="_blank" rel="noopener"
+           href="https://www.instagram.com/chantillythecafe/">Follow on Instagram</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container d-flex justify-between wrap gap-1">
+      <p class="m-0 small">&copy; <span id="year"></span> Chantilly — The Café</p>
+      <nav class="small">
+        <a class="link" href="about.html">About</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

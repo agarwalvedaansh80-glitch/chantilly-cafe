@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Menu — Chantilly, Bandra</title>
+  <meta name="description" content="Up-to-date menu with dietary tags and gentle availability badges (Fresh, Low, Sold out)." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Fraunces:wght@600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="scripts.js"></script>
+</head>
+<body data-page="menu">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="concept-bar" role="note">Concept website by Vedaansh Agarwal · not the official Chantilly website</div>
+
+
+  <header class="navbar">
+    <div class="container d-flex align-center justify-between">
+      <a class="navbar-brand logo" href="index.html" aria-label="Chantilly — The Café home">
+        <span class="logo-word">Chantilly</span><span class="logo-sub">— The Café</span>
+      </a>
+      <nav aria-label="Primary" class="navbar-nav">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="menu.html" aria-current="page">Menu</a>
+        <a class="nav-link" href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container">
+      <div class="d-flex justify-between align-baseline wrap">
+        <h1 class="h3 m-0">Menu</h1>
+        <div class="text-muted small" aria-live="polite">
+          <span id="menuUpdatedAt">Updated just now</span>
+          <button class="btn btn-dark btn-xs" id="refreshMenu" type="button" aria-label="Refresh availability time">Refresh</button>
+        </div>
+      </div>
+
+      <!-- Filters -->
+      <form id="filters" class="card mt-2">
+        <div class="card-body">
+          <div class="filters-inline">
+            <div class="search-wrap">
+              <label class="form-label" for="search">Search</label>
+              <input id="search" name="search" type="search" class="form-control"
+                     placeholder="tres leches, hot chocolate, latte…" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" />
+            </div>
+            <label class="form-switch"><input type="checkbox" id="f-eggless" /><span>Eggless</span></label>
+            <label class="form-switch"><input type="checkbox" id="f-vegan" /><span>Vegan</span></label>
+            <label class="form-switch"><input type="checkbox" id="f-glutenfree" /><span>Gluten-free</span></label>
+            <label class="form-switch"><input type="checkbox" id="f-nutfree" /><span>Nut-free</span></label>
+          </div>
+          <div class="filters-actions">
+            <button type="button" id="clearFilters" class="btn btn-dark btn-sm">Clear</button>
+          </div>
+        </div>
+      </form>
+
+      <!-- Category tabs -->
+      <div class="tabs mt-2" role="tablist" aria-label="Categories">
+        <button class="tab active" role="tab" aria-selected="true" data-cat="All">All</button>
+        <button class="tab" role="tab" aria-selected="false" data-cat="Desserts">Desserts</button>
+        <button class="tab" role="tab" aria-selected="false" data-cat="Bakery">Bakery</button>
+        <button class="tab" role="tab" aria-selected="false" data-cat="Beverages">Beverages</button>
+        <button class="tab" role="tab" aria-selected="false" data-cat="Coffee">Coffee</button>
+      </div>
+
+      <div id="menuList" class="row mt-3" role="list"></div>
+
+      <div id="emptyState" class="alert mt-3" hidden>
+        No items match your filters. Try clearing filters or searching another term.
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container d-flex justify-between wrap gap-1">
+      <p class="m-0 small">&copy; <span id="year"></span> Chantilly — The Café</p>
+      <nav class="small">
+        <a class="link" href="about.html">About</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
